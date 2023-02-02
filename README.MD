@@ -1,4 +1,4 @@
 # language
--htmlgit 
+-html 
 -js
 -css
