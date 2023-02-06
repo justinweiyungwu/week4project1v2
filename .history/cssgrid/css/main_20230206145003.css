@@ -262,7 +262,7 @@ footer {
     justify-content: center;
 }
 .top-footer-image {
-    padding-bottom: 1em;
+    padding-bottom: 20em;
 }
 
 
@@ -351,12 +351,6 @@ footer {
     .m-1-2 {
         grid-template-columns: 1fr 2fr;
     }
-    .footer-grid-container {
-        align-items: flex-start;
-        justify-content: center;
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-    }
 }
 
 
@@ -369,12 +363,6 @@ footer {
     }
     .m-hide {
         display: none;
-    }
-    .footer-grid-container {
-        align-items: flex-start;
-        justify-content: center;
-        display: grid;
-        grid-template-columns: 1fr 2fr;
     }
 
 }
