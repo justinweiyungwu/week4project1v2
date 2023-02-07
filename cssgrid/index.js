@@ -12,18 +12,18 @@ carouselInner.style.left = '0';
 carouselInner.style.transition = 'left 0.5s ease-in-out';
 carousel.appendChild(carouselInner);
 var image1 = document.createElement('img');
-image1.src = 'https://m.media-amazon.com/images/I/71k7prnFjiL._AC_SL1500_.jpg';
+image1.src = 'https://w0.peakpx.com/wallpaper/1015/498/HD-wallpaper-hanging-minions-in-sky-background-minions.jpg';
 image1.style.width = '50%';
-image1.style.height = '50%';
+image1.style.height = '65%';
 image1.style.float = 'left';
-image1.style.marginTop = '10rem';
+image1.style.marginTop = '5rem';
 carouselInner.appendChild(image1);
 var image2 = document.createElement('img');
 image2.src = 'https://m.media-amazon.com/images/I/71k7prnFjiL._AC_SL1500_.jpg';
 image2.style.width = '50%';
-image2.style.height = '50%';
+image2.style.height = '65%';
 image2.style.float = 'left';
-image2.style.marginTop = '10rem';
+image2.style.marginTop = '5rem';
 
 carouselInner.appendChild(image2);
 var leftButton = document.createElement('div');
@@ -32,7 +32,7 @@ leftButton.style.height = '50px';
 leftButton.style.background = 'black';
 leftButton.style.borderRadius = '50%';
 leftButton.style.position = 'absolute';
-leftButton.style.top = '50%';
+leftButton.style.top = '45%';
 leftButton.style.left = '5%';
 leftButton.style.marginTop = '-25px';
 leftButton.style.cursor = 'pointer';
@@ -43,7 +43,7 @@ rightButton.style.height = '50px';
 rightButton.style.background = 'black';
 rightButton.style.borderRadius = '50%';
 rightButton.style.position = 'absolute';
-rightButton.style.top = '50%';
+rightButton.style.top = '45%';
 rightButton.style.right = '5%';
 rightButton.style.marginTop = '-25px';
 rightButton.style.cursor = 'pointer';
@@ -67,4 +67,3 @@ rightButton.addEventListener('click', function() {
     carouselInner.style.left = '0';
   }
 });
-

@@ -1,0 +1,636 @@
+/* ==========================================================================
+    [Table of contents]
+
+    1. BASE
+        1.1 Page Rendering Defaults
+        1.2 Core Styling
+        1.3 Typography
+    2. LAYOUT
+        2.1 Core Layout
+        2.2 Small only
+        2.3 medium and up
+        2.4 Medium only
+        2.5 large screens and up
+        2.6 Large only
+    3. MODULES
+    4. STATES
+    5. THEME
+    6. UTILITY classes
+    7. PRINT
+
+    refer to http://smacss.com/
+    ========================================================================== */
+
+
+/* ==========================================================================
+   BASE
+   ========================================================================== */
+
+
+/* 1.1 Page Rendering Defaults */
+
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+
+/* 1.2 Core Styling */
+
+
+/* refer to https://css-tricks.com/box-sizing/ */
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+.bottom-rectangle-box{
+    border: 1px solid lightgray
+}
+.bottom-rectangle-gap{
+    column-gap: 1rem;
+}
+.web-solution-icon{
+    width: 5rem;
+    margin-left: 2%;
+}
+.bottom-icons{
+display: grid;
+width: 5rem;
+margin-left:10rem;
+max-width: 30rem;
+margin-top: 1rem;
+}
+
+.top-rol-col-text{
+    display: grid;
+    margin-top: 33rem;
+}
+
+.plus-icons{
+    display: grid;
+    width: 3rem;
+    max-width: 30rem;
+    margin-top: -13%;
+    z-index: 4;
+    position: relative;
+    margin-left: 27rem;
+    /* column-gap: ; */
+}
+img {
+    width: 100%;
+}
+
+
+/* 1.3 Typgraphy */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: Ubuntu, sans-serif;
+    font-weight: 300;
+    text-align: center;
+}
+
+p {
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+}
+.title-container p {
+    font-size: 0.9em;
+    color: gray;
+}
+.sample-accordian-menu{
+    margin-left: -2rem;
+}
+.bottom-white-text{
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+    margin-top: -1%;
+    margin-right: 15rem;
+
+}
+.left-text h2{
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+}
+.left-text p{
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+}
+
+
+.top-footer-info p {
+    font-style: italic;
+}
+.top-footer-info h2 {
+    text-align: left;
+    font-weight: 400;
+}
+.border {
+    border-color: gray;
+    position: relative;
+    right: -1em;
+    margin-left: 9em;
+    z-index: 1;
+    
+}
+.border2 {
+    background-color: #19b2de;
+    margin-top: -1.2em;
+    margin-right: -11rem;
+    height: 3rem; 
+    z-index: 2;
+    margin-left: -4rem;
+    position: sticky;
+    width: 31rem;
+}
+
+.border1 {
+border-color: #19b2de;
+margin-top: -1.2em;
+margin-left: 3em;
+border-width: 2px;
+z-index: 2;
+
+
+}
+.title-border {
+    border-color: red;
+}
+
+.mid-footer h2{
+     text-align: left;
+
+}
+
+/* ==========================================================================
+   2. LAYOUT
+   ========================================================================== */
+.menu 
+{
+    min-width: 3em;
+    max-width: 3em;
+}
+
+/* Helper to display empty layout containers*/
+
+div,
+main,
+section,
+footer,
+header {
+
+    min-height: 1rem;
+    padding: 1rem;
+}
+
+
+
+/* 2.1 Core layout */
+.row-bottom-row{
+    display: grid;
+    flex-direction: row;
+}
+.row-bottom {
+    grid-template-columns: 1fr 3fr;
+}
+.bottom-text{
+   font-size: 0.9em;
+   color: gray;
+   display: grid;
+}
+.row {
+    display: grid;
+    row-gap: 1rem;
+}
+
+.col {
+    position: relative;
+    object-fit: fill;
+}
+.top {
+    margin-top: -4em;
+    margin-bottom: -2em;
+}
+.title-container {
+    display: grid;
+text-align: center;
+justify-content: center;
+line-height: 0.7em;
+}
+
+.navbar {
+    display: grid;
+    align-items: center;
+  grid-template-columns: 3fr 1fr;
+  gap: 4em;
+
+}
+/*photo box*/
+
+.sml-photo img{
+    max-height: 15em;
+    object-fit: cover;
+}
+.row-bottom-col {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    background-color: #19b2de;
+    padding: 0%;
+}
+
+.left-text {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    flex-direction: column;
+line-height: 0em;
+min-width: 90%;
+}
+.right-box {
+   max-width: 6em; 
+}
+
+/*end*/
+
+/*footer*/
+
+footer {
+ display: grid;
+ justify-content: center;
+    background-color: #16242f;
+    margin: 2em -2em -2em -2em;
+    padding: 1em;
+}
+.footer-grid-container{
+    align-items: flex-start;
+    justify-content: center;
+}
+.top-footer-image {
+    padding-bottom: 20em;
+}
+
+
+.footer-image {
+    
+    object-fit: cover;
+    border-radius: 50%;
+    min-width: 10em;
+    min-height: 10em;
+    max-height: 10em;
+    max-width: 10em;
+
+}
+.top-footer, .mid-footer, .bottom-footer{
+ background-color: #16242f;
+ color: #fff;
+}
+/*end*/
+
+/* 2.2 Small only */
+
+@media screen and (max-width: 39.9375em) {
+    
+    body {
+        padding: 2em;
+    }
+    .s-hide {
+        display: none;
+        
+    }
+    
+
+
+ .grid-container {
+    display: grid;
+ }
+
+
+       
+       .bottom {
+        display: none;
+       }
+     .footer-grid-container {
+        display: grid;
+        grid-template-columns: 0fr 1fr;
+        margin-bottom: 2em;
+       
+     }
+     .two {
+        margin-bottom: 8rem;
+
+     }
+    }
+    
+
+
+/* 2.3 medium and up */
+
+@media screen and (min-width: 40em) {
+    .row {
+        max-width: 70rem;
+        column-gap: 1.5rem;
+        row-gap: 1.5rem;
+        margin: 0 auto;
+    }
+    .grid {
+        display: grid;
+        column-gap: 0.5rem;
+        row-gap: 0.5rem;
+    }
+    .title-container {
+        max-width: 100%;
+    }
+    .m-col-2 {
+        grid-template-columns: 1fr 1fr;
+    }
+    .m-col-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .m-col-4 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .m-col-5 {
+        grid-template-columns: repeat(5, 1fr);
+    }
+    .m-1-2 {
+        grid-template-columns: 1fr 2fr;
+    }
+}
+
+
+/* 2.4 Medium only */
+
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+    .m-row-span {
+        grid-column-start: 1;
+        grid-column-end: -1;
+    }
+    .m-hide {
+        display: none;
+    }
+
+}
+
+
+/* 2.5 large screens and up 2.6 Large only */
+
+@media screen and (min-width: 64em) {
+    .l-col-2 {
+        grid-template-columns: 3fr 7fr; 
+        margin-right: 1rem;   }
+    .l-col-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .l-col-4 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .l-col-5 {
+        grid-template-columns: repeat(5, 1fr);
+    }
+    .l-col-6 {
+        grid-template-columns: repeat(6, 1fr);
+    }
+    .l-row-span {
+        grid-column-start: 1;
+        grid-column-end: -1;
+    }
+    .l-hide {
+        display: none;
+    }
+    .left-text h2 {
+        font-size: 1em;
+    }
+    .left-text p {
+        font-size: 0.7em;
+    }
+    .mission {
+        display: none;
+    }
+
+}
+
+
+/* ==========================================================================
+   2. MODULES
+   ========================================================================== */
+
+
+/* ==========================================================================
+   2. STATES
+   ========================================================================== */
+
+
+/* ==========================================================================
+   5. THEME
+   ========================================================================== */
+
+
+
+/* ==========================================================================
+   6. UTILITY classes
+   ========================================================================== */
+
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden,
+[hidden] {
+    display: none !important;
+}
+
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.sr-only {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    /* 1 */
+}
+
+
+/*
+ * Extends the .sr-only class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    white-space: inherit;
+    width: auto;
+}
+
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before,
+.clearfix::after {
+    content: " ";
+    display: table;
+}
+
+.clearfix::after {
+    clear: both;
+}
+
+@media print,
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 1.25dppx),
+(min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+
+/* ==========================================================================
+   7. PRINT  styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *::before,
+    *::after {
+        background: #fff !important;
+        color: #000 !important;
+        /* Black prints faster */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+    a[href]::after {
+        content: " (" attr(href) ")";
+    }
+    abbr[title]::after {
+        content: " (" attr(title) ")";
+    }
+    /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+    a[href^="#"]::after,
+    a[href^="javascript:"]::after {
+        content: "";
+    }
+    pre {
+        white-space: pre-wrap !important;
+    }
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+    /*
+   * Printing Tables:
+   * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+   */
+    thead {
+        display: table-header-group;
+    }
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
