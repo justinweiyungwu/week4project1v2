@@ -204,6 +204,7 @@ header {
     object-fit: fill;
     margin-top: 3em;
     z-index: 5;
+    gap: 10em;
     
 }
 
@@ -348,13 +349,11 @@ footer {
         margin-bottom: 8rem;
 
      }
+    }
     
-}
     .col-styling {
         margin 
     }
-
-
 
 
 /* 2.3 medium and up */
